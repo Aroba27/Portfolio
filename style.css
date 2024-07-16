@@ -8,20 +8,21 @@
 }
 
 :root {
-    --font-color: #2C3E50;  
-    --secondary-color: #00ae95;  
-    --primary-color: #F0F8FF;  
+    --font-color: #2C3E50;
+    --secondary-color: #00ae95;
+    --primary-color: #F0F8FF;
 }
 
 .dark-theme {
     --font-color: #F7F8FA;
     --secondary-color: #00ae95;
     --primary-color: #2C3E50;
-} 
+}
 
 body {
     background: var(--primary-color);
     color: var(--font-color);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -33,6 +34,16 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background-color: var(--secondary-color);
     border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        display: none;
+    }
 }
 
 nav {
@@ -68,14 +79,24 @@ li:hover {
     background: var(--secondary-color);
 }
 
-nav ul li i{
+nav ul li i {
     font-size: 1.75rem;
 }
-.sun{
+
+.sun {
     display: none;
 }
+
+.menu {
+    display: none;
+    width: 100%;
+    height: 50px;
+    background: var(--secondary-color);
+
+    padding: 10px;
+}
+
 .hamburger-menu {
-    margin: 2rem;
     display: none;
     background: var(--secondary-color);
     flex-direction: column;
@@ -94,6 +115,8 @@ nav ul li i{
 }
 
 @media (max-width: 730px) {
+
+    .menu,
     .hamburger-menu {
         display: flex;
     }
@@ -104,14 +127,19 @@ nav ul li i{
         position: absolute;
         top: 3.5rem;
         right: 0;
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
         width: 100%;
         text-align: center;
+        z-index: 2;
     }
 
     nav ul li {
         width: 100%;
         padding: 1rem 0;
+    }
+
+    li:hover {
+        background: var(--primary-color);
     }
 
     nav ul.show {
@@ -146,10 +174,11 @@ p::selection {
 }
 
 @media (max-width: 870px) {
-    h1{
+    h1 {
         padding-top: 2rem;
     }
-   #home > p {
+
+    #home>p {
         padding-left: 10rem;
     }
 }
@@ -160,13 +189,14 @@ p::selection {
         padding: 2rem 2.5rem 0 2.5rem;
     }
 
-    #home > p {
+    #home>p {
         padding-left: 2.65rem;
     }
 }
 
 .skillset {
     padding: 2rem;
+    z-index: 1;
 }
 
 h3 {
@@ -226,6 +256,13 @@ h3 {
     left: 50%;
 }
 
+@media(max-width: 400px) {
+    .progress-bar {
+        width: 17rem;
+        height: 1.15rem;
+    }
+}
+
 #about {
     padding: 16rem 10rem;
     position: relative;
@@ -246,26 +283,30 @@ h3 {
 
 .fa-quote-left {
     top: 26%;
-    left: 10%;
+    left: 6%;
 }
 
 .fa-quote-right {
     bottom: 28%;
     right: 10%;
 }
-@media (max-width: 950px){
+
+@media (max-width: 950px) {
     #about {
         padding: 10rem 5rem;
     }
 }
-@media (max-width: 660px){
+
+@media (max-width: 660px) {
     #about {
         padding: 6rem 1rem;
     }
-    #about i{
+
+    #about i {
         display: none;
     }
 }
+
 #projects {
     width: 100%;
     margin-bottom: 2rem;
@@ -343,7 +384,7 @@ h2:hover::after {
     display: none;
 }
 
-.slide > button {
+.slide>button {
     position: absolute;
     top: 47%;
     font-size: 1.5rem;
@@ -372,24 +413,43 @@ h2:hover::after {
     transition: all 2s ease;
     border-radius: 10px;
 }
-@media(max-width: 660px){
-    .slide > button{
-        bottom: -55%;
+
+@media(max-width: 920px) {
+    h2 {
+        margin-top: 4vw;
+    }
+}
+
+@media(max-width: 660px) {
+    .slide {
+        position: relative;
+    }
+
+    .slide>button {
+        position: absolute;
+        top: 98%;
         margin: 1rem;
+        width: 10px;
+        height: 10px;
     }
-    .prev{
-        left: 40%;
+
+    .prev {
+        left: 35%;
     }
-    .next{
-        right: 40%;
+
+    .next {
+        right: 35%;
     }
-    .slide .last-project{
+
+    .slide .last-project {
         display: none;
     }
-    .project{
+
+    .project {
         width: 42%;
     }
 }
+
 .project1 {
     background: url(images/clock.PNG) no-repeat center center/cover;
 }
@@ -457,6 +517,7 @@ h2:hover::after {
 .project17 {
     background: url(images/doble\ click.PNG) no-repeat center center/cover;
 }
+
 .project18 {
     background: url(images/platte.PNG) no-repeat center center/cover;
 }
@@ -496,6 +557,7 @@ h2:hover::after {
 .project27 {
     background: url(images/todos.PNG) no-repeat center center/cover;
 }
+
 .active {
     width: 100%;
     height: 100%;
@@ -564,12 +626,19 @@ footer ul li a i {
     color: var(--font-color);
     font-size: 1.75rem;
 }
-@media(max-width: 560px){
-    footer{
+
+@media(max-width: 560px) {
+    footer {
         display: block;
         text-align: center;
+        height: 6rem;
     }
-    footer ul{
+
+    footer ul {
         justify-content: center;
+    }
+
+    .footer-copy {
+        margin-bottom: 1rem;
     }
 }

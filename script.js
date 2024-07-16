@@ -13,10 +13,26 @@ sun.addEventListener("click", () => {
     sun.style.display = "none";
 })
 
-document.getElementById('hamburger-menu').addEventListener('click', function () {
+document.getElementById('hamburger-menu').addEventListener('click', function (e) {
+    e.stopPropagation();
     const navLinks = document.getElementById('nav-links');
     navLinks.classList.toggle('show');
 });
+
+document.addEventListener('click', function (e) {
+    const navLinks = document.getElementById('nav-links');
+    if (!navLinks.contains(e.target) && navLinks.classList.contains('show')) {
+        navLinks.classList.remove('show');
+    }
+});
+
+document.querySelectorAll('#nav-links li').forEach(item => {
+    item.addEventListener('click', function () {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.remove('show');
+    });
+});
+
 
 gsap.from(".fa-quote-left", {
     y: -70,

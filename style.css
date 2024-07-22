@@ -451,7 +451,7 @@ h2:hover::after {
 }
 
 .project1 {
-    background: url(images/clock.PNG) no-repeat center center/cover;
+    background: url(images/todos.PNG) no-repeat center center/cover;
 }
 
 .project2 {
@@ -459,15 +459,15 @@ h2:hover::after {
 }
 
 .project3 {
-    background: url(images/progress.PNG) no-repeat center center/cover;
+    background: url(images/doble\ click.PNG) no-repeat center center/cover;
 }
 
 .project4 {
-    background: url(images/rotating\ nav.PNG) no-repeat center center/cover;
+    background: url(images/weather.PNG) no-repeat center center/cover;
 }
 
 .project5 {
-    background: url(images/periodic.PNG) no-repeat top right/cover;
+    background: url(images/clock.PNG) no-repeat center center/cover;
 }
 
 .project6 {
@@ -483,7 +483,7 @@ h2:hover::after {
 }
 
 .project9 {
-    background: url(images/search.PNG) no-repeat center center/cover;
+    background: url(images/rotating\ nav.PNG) no-repeat center center/cover;
 }
 
 .project10 {
@@ -507,7 +507,7 @@ h2:hover::after {
 }
 
 .project15 {
-    background: url(images/calculator.PNG) no-repeat center center/cover;
+    background: url(images/platte.PNG) no-repeat center center/cover;
 }
 
 .project16 {
@@ -515,15 +515,15 @@ h2:hover::after {
 }
 
 .project17 {
-    background: url(images/doble\ click.PNG) no-repeat center center/cover;
+    background: url(images/progress.PNG) no-repeat center center/cover;
 }
 
 .project18 {
-    background: url(images/platte.PNG) no-repeat center center/cover;
+    background: url(images/calculator.PNG) no-repeat center center/cover;
 }
 
 .project19 {
-    background: url(images/weather.PNG) no-repeat center center/cover;
+    background: url(images/search.PNG) no-repeat center center/cover;
 }
 
 .project20 {
@@ -555,7 +555,7 @@ h2:hover::after {
 }
 
 .project27 {
-    background: url(images/todos.PNG) no-repeat center center/cover;
+    background: url(images/periodic.PNG) no-repeat top right/cover;
 }
 
 .active {

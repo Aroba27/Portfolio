@@ -455,7 +455,7 @@ h2:hover::after {
 }
 
 .project2 {
-    background: url(images/expanding.PNG ) no-repeat top left/cover;
+    background: url(images/expanding\ cards.PNG ) no-repeat top left/cover;
 }
 
 .project3 {
